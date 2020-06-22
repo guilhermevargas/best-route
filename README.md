@@ -56,6 +56,7 @@ apenas quando novas rotas fossem inseridas.
 
 ###Descreva sua APÌ Rest de forma simplificada.
 /routes
+  
   POST: CRIA NOVA ROTA
   
   curl --location --request POST 'localhost:8080/routes' \
