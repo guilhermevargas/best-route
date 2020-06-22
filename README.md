@@ -4,8 +4,16 @@
 ###Como Executar:
 Necessário maven e java 8 instalado
 
+Run app
+
 cd best-route
-mvn spring-boot:run -Dspring-boot.run.arguments="/<path>/<file-name>.csv"
+mvn spring-boot:run -Dspring-boot.run.arguments="/path/file-name.csv"
+
+
+Run unit tests
+
+cd best-route
+mvn clean install
 
 ###Estrutura de arquivos e pacotes:
 
