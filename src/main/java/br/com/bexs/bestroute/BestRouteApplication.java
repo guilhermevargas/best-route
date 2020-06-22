@@ -36,7 +36,7 @@ public class BestRouteApplication {
     return args -> {
       do {
         try {
-          System.out.print("please enter the route: ******");
+          System.out.print("please enter the route: ");
           Scanner scanner = new Scanner(System.in);
           String route = scanner.nextLine();
           String[] routes = route.split("-");
