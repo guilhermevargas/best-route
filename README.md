@@ -55,6 +55,7 @@ volume de transação e armazenamento, poderiamos definir estratégias de chache
 apenas quando novas rotas fossem inseridas.
 
 ###Descreva sua APÌ Rest de forma simplificada.
+
 /routes
   
   POST: CRIA NOVA ROTA
