@@ -70,7 +70,7 @@ apenas quando novas rotas fossem inseridas.
 
   GET: MELHOR ROTA
   
-  curl --location --request GET 'localhost:8080/routes?from=SCL&to=GRU'
+  curl --location --request GET 'localhost:8080/routes?from=GRU&to=CDG'
 
 
 
