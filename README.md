@@ -32,8 +32,6 @@ br/com/bexs/bestroute/repository - camada de persistencia
 
 br/com/bexs/bestroute/service - regra de negócido
 
-For further reference, please consider the following sections:
-
 test:
 
 br/com/bexs/bestroute/api - testes integrados, sobe a aplicação e testa a requisição pros endpoints
