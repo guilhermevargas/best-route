@@ -9,6 +9,7 @@ public class BestRouteDTO {
   private List<String> connections;
 
   public BestRouteDTO() {
+    this.lowestCost = 0;
     this.connections = new LinkedList<>();
   }
 

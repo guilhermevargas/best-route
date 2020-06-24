@@ -74,7 +74,7 @@ public class RouteService {
   }
 
   private void addPath(int[][] path, int from, int to, BestRouteDTO bestRouteDTO, List<String> vertex) {
-    if (path[from][to] == from)
+    if (path[from][to] == from || from == to)
       return;
 
     addPath(path, from, path[from][to], bestRouteDTO, vertex);

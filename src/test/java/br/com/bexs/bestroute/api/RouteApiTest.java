@@ -93,6 +93,27 @@ public class RouteApiTest {
   }
 
   @Test
+  public void mustReturnZeroCostForEqualRoutes() throws IOException {
+    File file = mockFileFromClassPath();
+    HttpEntity<Object> httpEntity = mountHttpEntity();
+
+    String uri = UriComponentsBuilder.fromHttpUrl(BASE_PATH)
+            .queryParam("from", "CDG")
+            .queryParam("to", "CDG")
+            .toUriString();
+
+    ResponseEntity<BestRouteDTO> response = this.restTemplate.exchange(uri, GET, httpEntity, BestRouteDTO.class);
+    BestRouteDTO responseBody = response.getBody();
+    List<String> connections = responseBody.getConnections();
+
+    assertThat(responseBody.getLowestCost(), is(0));
+    assertThat(connections, hasSize(2));
+    assertThat(connections, contains("CDG", "CDG"));
+
+    file.deleteOnExit();
+  }
+
+  @Test
   public void mustGetLowestCostPath() throws IOException {
     File file = mockFileFromClassPath();
     HttpEntity<Object> httpEntity = mountHttpEntity();
