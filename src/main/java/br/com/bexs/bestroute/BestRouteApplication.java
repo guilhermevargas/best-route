@@ -40,6 +40,10 @@ public class BestRouteApplication {
           Scanner scanner = new Scanner(System.in);
           String route = scanner.nextLine();
           String[] routes = route.split("-");
+
+          if (routes.length != 2)
+            throw new IllegalArgumentException("Incorrect format. Expected: GRU-CDG");
+
           BestRouteDTO bestRoute = routeService.getBestRoute(routes[0], routes[1]);
           System.out.println("best route: " + bestRoute);
         } catch (Exception ex) {
